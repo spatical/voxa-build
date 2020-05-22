@@ -13,3 +13,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && python get-pip.py \
     && pip install awscli \
     && rm -f /tmp/get-pip.py
+
+RUN apt-get install zip -y
