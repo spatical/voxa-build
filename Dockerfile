@@ -7,7 +7,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && apt-get install google-cloud-sdk -y --no-install-recommends \
     # install zip
     && apt-get install zip -y --no-install-recommends \
-    # install AWS CLI
+    # install AWS CLI (requires python and pip)
     && apt-get install -y --no-install-recommends \
         build-essential g++ python2.7 python2.7-dev unzip curl \
     && rm -rf /var/lib/apt/lists/* \
@@ -17,4 +17,6 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && python get-pip.py \
     && pip install awscli \
     && rm -f /tmp/get-pip.py \
-    && yarn global add voxa-cli
+    # install Voxa CLI and tools for compiling interaction models
+    && yarn global add voxa-cli \
+    && yarn global add ts-node
