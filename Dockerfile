@@ -16,5 +16,5 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && curl -O https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py \
     && pip install awscli \
-    && rm -f /tmp/get-pip.py
+    && rm -f /tmp/get-pip.py \
     && yarn global add voxa-cli
