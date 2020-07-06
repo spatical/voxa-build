@@ -20,7 +20,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     # install Voxa CLI and tools for compiling interaction models and basic account linking services
     && yarn global add voxa-cli \
     && yarn global add ts-node \
-    && yarn global add ask-cli \
+    && yarn global add ask-cli@1.7.23 \
     && yarn global add webpack \
     && yarn global add webpack-cli \
     && yarn global add gulp \
