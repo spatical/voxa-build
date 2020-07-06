@@ -17,6 +17,14 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && python get-pip.py \
     && pip install awscli \
     && rm -f /tmp/get-pip.py \
-    # install Voxa CLI and tools for compiling interaction models
+    # install Voxa CLI and tools for compiling interaction models and basic account linking services
     && yarn global add voxa-cli \
-    && yarn global add ts-node
+    && yarn global add ts-node \
+    && yarn global add ask-cli \
+    && yarn global add webpack \
+    && yarn global add webpack-cli \
+    && yarn global add gulp \
+    # install serverless
+    && yarn global add serverless \ 
+    # install Terraform
+    && ./terraform-install.sh
