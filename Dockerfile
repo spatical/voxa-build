@@ -26,5 +26,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && yarn global add gulp \
     # install serverless
     && yarn global add serverless \ 
-    # install Terraform
+    # install Terraform 
+    && curl -LO https://raw.github.com/robertpeteuil/terraform-installer/master/terraform-install.sh \ 
+    && chmod +x terraform-install.sh \ 
     && ./terraform-install.sh
